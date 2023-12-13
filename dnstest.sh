@@ -28,7 +28,6 @@ done
 printf "\n"
 
 for d in $DOMAINS; do
-        #row=$d
         printf "%-15s" "$d"
         for r in $DNSRESOLVERS; do
                 tim=`dig $d @$r |  grep "Query time:" | cut -d " " -f 4`
